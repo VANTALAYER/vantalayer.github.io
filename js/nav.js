@@ -144,6 +144,7 @@ function buildModals() {
         <p><strong>Effective:</strong> January 1, 2025</p>
         <p>Vanta Layer Systems is a game studio based in Montréal, Québec, Canada.</p>
         <p><strong>Data collected via contact form:</strong> name, email, message, and technical metadata (browser, OS, screen resolution, timezone, approximate session duration, referrer URL) for the purpose of responding to inquiries and filtering spam.</p>
+        <p><strong>Data collected via click analytics:</strong> when you interact with certain links and buttons on this site, we record which element was clicked, the page it was on, your browser, OS, approximate location (country and city via IP lookup), and referrer. This data is stored privately in our own analytics system and is used solely to understand how visitors use the site. It is never sold or shared.</p>
         <p><strong>Usage:</strong> Contact data is used solely to respond to your message. It is never sold or shared with third parties except as required by law.</p>
         <p><strong>Third-party platforms:</strong> Links to Reddit and X/Twitter are governed by their own privacy policies.</p>
         <p><strong>Retention:</strong> Contact submissions are retained for up to 12 months.</p>
