@@ -50,7 +50,7 @@ function buildNav() {
           <div class="dropdown" role="menu">
             <a href="${SHELLHACK_REDDIT}" target="_blank" rel="noopener" class="dd-item" role="menuitem">
               <div class="dd-thumb">
-                <img src="${root('img/shellhack-logo.png')}" alt="SHELLHACK">
+                <img src="${root('img/shellhack-logo-small.png')}" alt="SHELLHACK">
               </div>
               <div>
                 <span class="dd-label">SHELLHACK</span>
