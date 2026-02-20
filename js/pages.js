@@ -76,7 +76,7 @@ function renderHome(el) {
             <h2 class="section-title">SHELLHACK</h2>
             <div class="game-status">&#x25CF;&nbsp; Under Development &mdash; Coming Soon</div>
           </div>
-          <a href="${LINKS.reddit}" target="_blank" rel="noopener" class="btn-community">
+          <a href="${LINKS.reddit}" target="_blank" rel="noopener" class="btn-community" data-track="home-join-community">
             ${ICON.reddit} Join the Community
           </a>
         </div>
@@ -130,21 +130,21 @@ function renderHome(el) {
               <div class="contact-icon">${ICON.xBig}</div>
               <div>
                 <div class="contact-item-label">Vanta Layer on X</div>
-                <div class="contact-item-value"><a href="${LINKS.xVL}" target="_blank" rel="noopener">@vantalayer</a></div>
+                <div class="contact-item-value"><a href="${LINKS.xVL}" target="_blank" rel="noopener" data-track="contact-x-vl">@vantalayer</a></div>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">${ICON.xBig}</div>
               <div>
                 <div class="contact-item-label">RedSig - Lead Designer on X</div>
-                <div class="contact-item-value"><a href="${LINKS.xRS}" target="_blank" rel="noopener">@theredsig</a></div>
+                <div class="contact-item-value"><a href="${LINKS.xRS}" target="_blank" rel="noopener" data-track="contact-x-rs">@theredsig</a></div>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">${ICON.reddit}</div>
               <div>
                 <div class="contact-item-label">SHELLHACK Community</div>
-                <div class="contact-item-value"><a href="${LINKS.reddit}" target="_blank" rel="noopener">r/SHELLHACK on Reddit</a></div>
+                <div class="contact-item-value"><a href="${LINKS.reddit}" target="_blank" rel="noopener" data-track="contact-reddit">r/SHELLHACK on Reddit</a></div>
               </div>
             </div>
             <div class="contact-item">
@@ -206,6 +206,10 @@ function renderHome(el) {
     s.src = 'js/contact.js';
     s.onload = () => { if (typeof window.initContactForm === 'function') window.initContactForm(); };
     document.body.appendChild(s);
+  }
+
+   if (typeof window.initTracker === 'function') {
+    window.initTracker();
   }
 }
 
@@ -390,7 +394,7 @@ function renderCraftTimeLog(el) {
           </div>
           <h1 class="ctl-title">Track Your Time.<br><span>Keep Your Privacy.</span></h1>
           <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work without signing up, logging in, or being spied on.</p>
-          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download">
+          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download" data-track="ctl-download-hero">
             ${ICON.download}
             <span>Download Free — v1.1.0</span>
             <span class="ctl-dl-os">${ICON.windows} Windows</span>
@@ -516,7 +520,7 @@ function renderCraftTimeLog(el) {
         <div class="ctl-cta-section">
           <h2 class="ctl-cta-title">It's free. Just download it.</h2>
           <p class="ctl-cta-sub">Built for personal use, shared because why not. No ads, no upsell, no telemetry.</p>
-          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download ctl-download--large">
+          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download ctl-download--large" data-track="ctl-download-cta">
             ${ICON.download}
             <span>Download CraftTimeLog v1.1.0</span>
             <span class="ctl-dl-os">${ICON.windows} Windows - Free</span>
@@ -527,6 +531,10 @@ function renderCraftTimeLog(el) {
       </div>
     </div>
   `;
+
+     if (typeof window.initTracker === 'function') {
+    window.initTracker();
+  }
 }
 
 /* ══════════════════════════════════════════════════════════
