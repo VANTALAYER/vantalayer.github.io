@@ -386,7 +386,6 @@ function renderCraftTimeLog(el) {
             <img src="img/CTLicon.png" alt="CraftTimeLog icon" class="ctl-brand-icon">
             <div class="ctl-brand-text">
               <span class="ctl-brand-name">CraftTimeLog</span>
-              <span class="ctl-brand-version">v1.1.0</span>
             </div>
           </div>
           <h1 class="ctl-title">Track Your Time.<br><span>Not Your Users.</span></h1>
