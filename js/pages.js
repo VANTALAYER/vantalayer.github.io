@@ -507,7 +507,7 @@ function renderCraftTimeLog(el) {
                 <li>~120 MB disk space</li>
                 <li>1024×768 minimum resolution</li>
               </ul>
-              <p class="ctl-sysreq-note">Save data and preferences are stored locally alongside the app and settings persist between sessions.</p>
+              <p class="ctl-sysreq-note">Save data and preferences are stored locally alongside the app and persist between sessions.</p>
             </div>
           </div>
         </div>
