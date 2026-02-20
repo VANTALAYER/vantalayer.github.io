@@ -46,7 +46,7 @@ function buildNav() {
             Game ${SVG.chevron}
           </button>
           <div class="dropdown" role="menu">
-            <a href="${SHELLHACK_REDDIT}" target="_blank" rel="noopener" class="dd-item" role="menuitem">
+            <a href="${SHELLHACK_REDDIT}" target="_blank" rel="noopener" class="dd-item" role="menuitem" data-track="nav-shellhack-reddit">
               <div class="dd-thumb">
                 <img src="${root('img/shellhack-logo-small.png')}" alt="SHELLHACK">
               </div>
@@ -63,13 +63,13 @@ function buildNav() {
             Tech ${SVG.chevron}
           </button>
           <div class="dropdown" role="menu">
-            <a href="${root('vantacore.html')}" class="dd-item" role="menuitem">
+            <a href="${root('vantacore.html')}" class="dd-item" role="menuitem" data-track="nav-vantacore">
               <div>
                 <span class="dd-label">VantaCore</span>
                 <span class="dd-sub">Management / Sim Framework</span>
               </div>
             </a>
-            <a href="${root('crafttimelog.html')}" class="dd-item" role="menuitem">
+            <a href="${root('crafttimelog.html')}" class="dd-item" role="menuitem" data-track="nav-crafttimelog">
               <div>
                 <span class="dd-label">CraftTimeLog</span>
                 <span class="dd-sub">Time Tracking App</span>
@@ -87,13 +87,13 @@ function buildNav() {
       <div style="display:flex;align-items:center;gap:8px;">
         <div class="nav-sep"></div>
         <div class="nav-socials">
-          <a href="${SHELLHACK_REDDIT}" target="_blank" rel="noopener" title="r/SHELLHACK on Reddit">
+          <a href="${SHELLHACK_REDDIT}" target="_blank" rel="noopener" title="r/SHELLHACK on Reddit" data-track="nav-social-reddit">
             ${SVG.reddit}
           </a>
-          <a href="${X_VANTALAYER}" target="_blank" rel="noopener" title="@vantalayer on X">
+          <a href="${X_VANTALAYER}" target="_blank" rel="noopener" title="@vantalayer on X" data-track="nav-social-x-vl">
             ${SVG.xIcon}<span class="x-badge">VL</span>
           </a>
-          <a href="${X_THEREDSIG}" target="_blank" rel="noopener" title="@theredsig on X">
+          <a href="${X_THEREDSIG}" target="_blank" rel="noopener" title="@theredsig on X" data-track="nav-social-x-rs">
             ${SVG.xIcon}<span class="x-badge">RS</span>
           </a>
         </div>
@@ -210,4 +210,5 @@ document.addEventListener('DOMContentLoaded', () => {
   buildModals();
   initModalBackdrop();
   highlightNav();
+  if (typeof window.initTracker === 'function') window.initTracker();
 });
