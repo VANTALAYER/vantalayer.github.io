@@ -395,7 +395,7 @@ function renderCraftTimeLog(el) {
             <span>Download Free — v1.1.0</span>
             <span class="ctl-dl-os">${ICON.windows} Windows</span>
           </a>
-          <p class="ctl-hero-note">No installation required &nbsp;&middot;&nbsp; No account &nbsp;&middot;&nbsp; No internet &nbsp;&middot;&nbsp; ~150MB</p>
+          <p class="ctl-hero-note">No installation required &nbsp;&middot;&nbsp; No account &nbsp;&middot;&nbsp; No internet &nbsp;&middot;&nbsp; ~120MB</p>
         </div>
 
         <!-- Screenshots -->
