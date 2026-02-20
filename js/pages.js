@@ -19,7 +19,7 @@ const DEVLOG_ENTRIES = [
   {
     num:   '#003',
     title: 'Everything Is Upgradable Now & Realism Has to Compromise',
-    date:  'Feb 8 2026',
+    date:  'Feb 17 2026',
     url:   'https://www.reddit.com/r/SHELLHACK/comments/1r7ned8/devlog_003_everything_is_upgradable_now_realism/',
   },
   {
