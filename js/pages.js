@@ -427,9 +427,9 @@ async function renderCraftTimeLog(el) {
         <!-- Screenshots -->
         <div class="ctl-screenshots">
           <div class="ctl-ss-grid">
-            <div class="ctl-ss-item"><img src="img/CTL-ss01.jpg" alt="CraftTimeLog — Classic Light theme" loading="lazy"></div>
-            <div class="ctl-ss-item"><img src="img/CTL-ss02.jpg" alt="CraftTimeLog — Classic Dark theme with Pomodoro" loading="lazy"></div>
-            <div class="ctl-ss-item"><img src="img/CTL-ss03.jpg" alt="CraftTimeLog — Customization panel" loading="lazy"></div>
+            <div class="ctl-ss-item" onclick="openLightbox('img/CTL-ss01.jpg')" title="Click to enlarge"><img src="img/CTL-ss01.jpg" alt="CraftTimeLog — Classic Light theme" loading="lazy"></div>
+            <div class="ctl-ss-item" onclick="openLightbox('img/CTL-ss02.jpg')" title="Click to enlarge"><img src="img/CTL-ss02.jpg" alt="CraftTimeLog — Classic Dark theme with Pomodoro" loading="lazy"></div>
+            <div class="ctl-ss-item" onclick="openLightbox('img/CTL-ss03.jpg')" title="Click to enlarge"><img src="img/CTL-ss03.jpg" alt="CraftTimeLog — Customization panel" loading="lazy"></div>
           </div>
         </div>
 
@@ -552,6 +552,13 @@ async function renderCraftTimeLog(el) {
 
       </div>
     </div>
+    <!-- Lightbox -->
+    <div class="modal-overlay" id="modal-lightbox" onclick="closeLightbox()">
+      <div class="lightbox-box">
+        <button class="modal-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" src="" alt="Screenshot">
+      </div>
+    </div>
     <!-- Patch Note Modal -->
     <div class="modal-overlay" id="modal-ctl-patchnote">
       <div class="modal-box">
@@ -572,6 +579,16 @@ async function renderCraftTimeLog(el) {
     patchModal.addEventListener('click', e => {
       if (e.target === patchModal) { patchModal.classList.remove('open'); document.body.style.overflow = ''; }
     });
+     /* Lightbox helpers */
+  window.openLightbox = function(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('modal-lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeLightbox = function() {
+    document.getElementById('modal-lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  };
   }
 }
 
