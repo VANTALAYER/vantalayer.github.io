@@ -136,7 +136,7 @@ function renderHome(el) {
             <div class="contact-item">
               <div class="contact-icon">${ICON.xBig}</div>
               <div>
-                <div class="contact-item-label">Lead Designer on X</div>
+                <div class="contact-item-label">RedSig - Lead Designer on X</div>
                 <div class="contact-item-value"><a href="${LINKS.xRS}" target="_blank" rel="noopener">@theredsig</a></div>
               </div>
             </div>
