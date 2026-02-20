@@ -859,3 +859,24 @@ body.light-mode .footer-copy { color: #ccc; }
 body.light-mode .footer-links a { color: #bbb; }
 body.light-mode .footer-links a:hover { color: #555; }
 .footer-logo-img--dark { mix-blend-mode: multiply; }
+
+/* ── CraftTimeLog patch note button & modal ── */
+.ctl-hero-actions {
+  display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+}
+.ctl-patchnote-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: 'Space Mono', monospace; font-size: 11px;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #1a56db; text-decoration: underline;
+  text-underline-offset: 3px; padding: 0;
+  transition: opacity .15s;
+}
+.ctl-patchnote-btn:hover { opacity: 0.7; }
+
+.ctl-patchnote-content {
+  white-space: pre-wrap; word-break: break-word;
+  font-family: 'Space Mono', monospace; font-size: 12px;
+  line-height: 1.9; color: #666; margin: 0;
+  max-height: 60vh; overflow-y: auto;
+}
