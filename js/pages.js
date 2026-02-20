@@ -1,36 +1,28 @@
 /* ══════════════════════════════════════════════════════════
    pages.js — ALL page content lives here.
-
-   Each HTML page just has: <main id="app" data-page="home">
-   This script reads data-page and renders the right content.
-
-   To edit ANY page content, edit here — one file, all pages.
    ══════════════════════════════════════════════════════════ */
 
 /* ── Reddit & social links (change once here) ── */
 const LINKS = {
-  reddit:    'https://www.reddit.com/r/SHELLHACK/',
-  xVL:       'https://x.com/vantalayer',
-  xRS:       'https://x.com/theredsig',
-  contact:   'index.html#contact',
+  reddit:  'https://www.reddit.com/r/SHELLHACK/',
+  xVL:     'https://x.com/vantalayer',
+  xRS:     'https://x.com/theredsig',
+  contact: 'index.html#contact',
 };
 
 /* ══════════════════════════════════════════════════════════
    DEVLOG ENTRIES
    ─────────────────────────────────────────────────────────
    Add new entries at the TOP of this array.
-   Each entry: { num, title, date, url }
-   url → your Reddit post link
    ══════════════════════════════════════════════════════════ */
 const DEVLOG_ENTRIES = [
-  /* Example — uncomment and fill in when you have a real post:*/
-   {
+  {
     num:   '#003',
     title: 'Everything Is Upgradable Now & Realism Has to Compromise',
     date:  'Feb 8 2026',
     url:   'https://www.reddit.com/r/SHELLHACK/comments/1r7ned8/devlog_003_everything_is_upgradable_now_realism/',
   },
-   {
+  {
     num:   '#002',
     title: 'The Terminal Gets Serious',
     date:  'Feb 10 2026',
@@ -38,11 +30,10 @@ const DEVLOG_ENTRIES = [
   },
   {
     num:   '#001',
-    title: 'Wrapping up Vynamp — SHELLHACK\’s in-game music & radio system',
+    title: 'Wrapping up Vynamp — SHELLHACK\'s in-game music & radio system',
     date:  'Jan 29 2026',
     url:   'https://www.reddit.com/r/SHELLHACK/comments/1qos862/devlog_wrapping_up_vynamp_shellhacks_ingame_music/',
   },
-  
 ];
 
 /* ══════════════════════════════════════════════════════════
@@ -63,13 +54,8 @@ const ICON = {
   </svg>`,
   pin: `<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
   arrow: `<svg class="devlog-arrow" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>`,
-  download: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>`,
-  clock: `<svg width="64" height="64" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
-  layers: `<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
-  bolt: `<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
-  shield: `<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
-  code: `<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
-  chip: `<svg width="48" height="48" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg>`,
+  download: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>`,
+  windows: `<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>`,
 };
 
 /* ══════════════════════════════════════════════════════════
@@ -87,7 +73,7 @@ function renderHome(el) {
         </div>
         <div class="hero-meta">
           <div class="hero-title-block">
-            <div class="section-title"><h2>SHELLHACK</2></div>
+            <div class="game-title">SHELLHACK</div>
             <div class="game-status">&#x25CF;&nbsp; Under Development &mdash; Coming Soon</div>
           </div>
           <a href="${LINKS.reddit}" target="_blank" rel="noopener" class="btn-community">
@@ -118,7 +104,7 @@ function renderHome(el) {
             <p>Together, <strong>VANTA + LAYER</strong> represent a core belief: that the best games
             take you to the deepest layer of a subject, not just the surface.</p>
             <p>The <strong>SYSTEMS</strong> are the bedrock. Custom tools, like <strong>VantaCore</strong>
-            and others apps exist because off-the-shelf solutions are not always built for us.</p>
+            and other apps exist because off-the-shelf solutions are not always built for us.</p>
           </div>
           <div class="about-visual">
             <div class="about-glow"></div>
@@ -174,18 +160,18 @@ function renderHome(el) {
               <div class="form-row">
                 <div>
                   <label class="form-label" for="f-name">Name</label>
-                  <input type="text" id="f-name" class="form-input" placeholder="Your name" required minlength="2" autocomplete="name">
+                  <input type="text" id="f-name" name="name" class="form-input" placeholder="Your name" required minlength="2" autocomplete="name">
                   <div class="form-error" id="err-name">Please enter your name.</div>
                 </div>
                 <div>
                   <label class="form-label" for="f-email">Email</label>
-                  <input type="email" id="f-email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+                  <input type="email" id="f-email" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
                   <div class="form-error" id="err-email">Please enter a valid email.</div>
                 </div>
               </div>
               <div class="form-group">
                 <label class="form-label" for="f-subject">Subject</label>
-                <select id="f-subject" class="form-select">
+                <select id="f-subject" name="subject" class="form-select">
                   <option>Collaboration Opportunity</option>
                   <option>Tech Licensing</option>
                   <option>Press Inquiry</option>
@@ -196,7 +182,7 @@ function renderHome(el) {
               </div>
               <div class="form-group">
                 <label class="form-label" for="f-message">Message</label>
-                <textarea id="f-message" class="form-textarea" placeholder="Your message..." required minlength="10"></textarea>
+                <textarea id="f-message" name="message" class="form-textarea" placeholder="Your message..." required minlength="10"></textarea>
                 <div class="form-error" id="err-message">Message must be at least 10 characters.</div>
               </div>
               <div style="display:none!important" aria-hidden="true">
@@ -211,10 +197,16 @@ function renderHome(el) {
     </section>
   `;
 
-  /* Load contact form logic after render */
-  const s = document.createElement('script');
-  s.src = 'js/contact.js';
-  document.body.appendChild(s);
+  /* Init contact form — contact.js exposes window.initContactForm */
+  if (typeof window.initContactForm === 'function') {
+    window.initContactForm();
+  } else {
+    /* contact.js not yet loaded — load it then init */
+    const s = document.createElement('script');
+    s.src = 'js/contact.js';
+    s.onload = () => { if (typeof window.initContactForm === 'function') window.initContactForm(); };
+    document.body.appendChild(s);
+  }
 }
 
 /* ── DEVLOG ── */
@@ -255,148 +247,289 @@ function renderDevlog(el) {
 function renderVantaCore(el) {
   el.innerHTML = `
     <div class="vc-wrap">
-      <div class="vc-header">
-        <div class="vc-icon">${ICON.chip}</div>
-        <div>
-          <div class="vc-title">VantaCore</div>
-          <div class="vc-version">Management / Sim Framework &nbsp;v3.4.0</div>
-        </div>
-      </div>
-      <div class="vc-grid">
-        <div>
-          <div class="vc-hero-box">
-            <div class="vc-hex-bg" id="hexGrid"></div>
-            <div class="vc-hero-text">
-              <h3>Deterministic Entity Architecture</h3>
-              <p>Optimized for complex management games with massive data points.</p>
-            </div>
-          </div>
-          <div class="vc-features">
-            <div class="vc-feature">
-              <div class="vc-feature-icon">${ICON.layers}</div>
-              <h4>Multi-Layer Logic</h4>
-              <p>Abstracted logic layers for complex game systems without coupling concerns.</p>
-            </div>
-            <div class="vc-feature">
-              <div class="vc-feature-icon">${ICON.bolt}</div>
-              <h4>Zero Latency</h4>
-              <p>Highly optimized memory management for simulation ticks at scale.</p>
-            </div>
-            <div class="vc-feature">
-              <div class="vc-feature-icon">${ICON.shield}</div>
-              <h4>Deterministic</h4>
-              <p>Frame-perfect state synchronization for multiplayer simulation scenarios.</p>
-            </div>
-            <div class="vc-feature">
-              <div class="vc-feature-icon">${ICON.code}</div>
-              <h4>Internal API</h4>
-              <p>Easily extendable modular systems for building custom simulations fast.</p>
-            </div>
-          </div>
-        </div>
-        <div class="vc-sidebar">
-          <div class="vc-cta">
-            <h3>License the SDK</h3>
-            <p>Built for professional simulation and management game development. Inquire for pricing and access.</p>
-            <button onclick="window.location.href='index.html#contact'">Contact Sales</button>
-          </div>
-          <div class="vc-benchmarks">
-            <h4>Core Benchmarks</h4>
-            <div class="bench-row"><span class="bench-label">1M Entities</span><span class="bench-val">~1.2ms</span></div>
-            <div class="bench-row"><span class="bench-label">Tick Precision</span><span class="bench-val">64-bit</span></div>
-            <div class="bench-row"><span class="bench-label">Memory Overhead</span><span class="bench-val">Minimal</span></div>
+
+      <!-- Hero banner -->
+      <div class="vc-hero-banner">
+        <div class="vc-hero-noise"></div>
+        <div class="vc-hero-content">
+          <img src="img/vantacore-logo.png" alt="VantaCore" class="vc-logo-img">
+          <p class="vc-hero-tagline">Proprietary Game Framework by Vanta Layer Systems</p>
+          <div class="vc-hero-tags">
+            <span class="vc-tag">In-House</span>
+            <span class="vc-tag">2D / Management / Sim</span>
+            <span class="vc-tag">Not Publicly Available</span>
           </div>
         </div>
       </div>
+
+      <!-- What is it -->
+      <div class="vc-section">
+        <div class="vc-two-col">
+          <div class="vc-text-block">
+            <div class="section-tag">Origin</div>
+            <h2 class="vc-section-title">Built Out of Necessity</h2>
+            <p>VantaCore was born while building <strong>SHELLHACK</strong>. VB.Net — the language powering our projects — was never designed with game development in mind, and its limitations started showing fast. Rather than fight the tools, we built our own layer on top.</p>
+            <p>What started as a set of workarounds became a proper framework — one that handles the exact types of games we make: <strong>management-heavy, simulation-driven, data-rich</strong> experiences where performance and stability matter more than flashy rendering.</p>
+          </div>
+          <div class="vc-stat-stack">
+            <div class="vc-stat">
+              <div class="vc-stat-value">2D</div>
+              <div class="vc-stat-label">Purpose-built for flat, data-driven games. No 3D scope creep.</div>
+            </div>
+            <div class="vc-stat">
+              <div class="vc-stat-value">1</div>
+              <div class="vc-stat-label">Game already running on it — SHELLHACK.</div>
+            </div>
+            <div class="vc-stat">
+              <div class="vc-stat-value">∞</div>
+              <div class="vc-stat-label">Designed to scale across all future Vanta Layer projects.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What it does -->
+      <div class="vc-section vc-section--dark">
+        <div class="section-tag">Capabilities</div>
+        <h2 class="vc-section-title">What VantaCore Does</h2>
+        <div class="vc-pillars">
+          <div class="vc-pillar">
+            <div class="vc-pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3>Modular Component System</h3>
+            <p>Game systems are built as independent, composable modules. Swap, extend or disable without touching everything else.</p>
+          </div>
+          <div class="vc-pillar">
+            <div class="vc-pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Scalable Save System</h3>
+            <p>Data-driven save architecture that handles complex game states cleanly — designed to evolve as the game grows.</p>
+          </div>
+          <div class="vc-pillar">
+            <div class="vc-pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Performance-First</h3>
+            <p>Optimized for management and simulation workloads: many systems, many entities, many state changes — without stuttering.</p>
+          </div>
+          <div class="vc-pillar">
+            <div class="vc-pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Fast Iteration</h3>
+            <p>Internal pipelines built to move quickly. Reduce the gap between design ideas and seeing them run in-game.</p>
+          </div>
+          <div class="vc-pillar">
+            <div class="vc-pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Data-Driven Design</h3>
+            <p>Game content and rules are decoupled from code. Tune, balance and expand through data without recompiling.</p>
+          </div>
+          <div class="vc-pillar">
+            <div class="vc-pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Stability First</h3>
+            <p>No experimental features for the sake of it. Every addition is tested against real game scenarios before it's committed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Status & roadmap -->
+      <div class="vc-section">
+        <div class="vc-two-col vc-two-col--flip">
+          <div class="vc-status-card">
+            <div class="vc-status-header">
+              <span class="vc-status-dot"></span>
+              <span class="vc-status-label">Current Status: Framework</span>
+            </div>
+            <p>VantaCore is an active, evolving framework — not a finished product. It is proprietary technology, used exclusively inside Vanta Layer Systems. There are no plans to release it publicly at this time.</p>
+            <div class="vc-status-bar-row">
+              <span>Framework</span>
+              <div class="vc-progress"><div class="vc-progress-fill" style="width:65%"></div></div>
+              <span>Engine</span>
+            </div>
+            <p class="vc-status-note">Development continues in parallel with SHELLHACK. The roadmap points toward a full engine capable of powering every future Vanta Layer title.</p>
+          </div>
+          <div class="vc-text-block">
+            <div class="section-tag">Roadmap</div>
+            <h2 class="vc-section-title">Where It's Going</h2>
+            <p>VantaCore will continue to grow alongside our games. Each new feature we need for SHELLHACK or future projects gets built into the framework, making the next game faster to build.</p>
+            <p>The goal isn't to compete with Unity or Godot. It's to have a tool that is <strong>100% shaped around the games we make</strong> — no wasted features, no forced workflows, no license negotiations.</p>
+            <p>Proprietary. Focused. Ours.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   `;
-
-  /* Populate hex grid */
-  const grid = document.getElementById('hexGrid');
-  if (grid) {
-    for (let i = 0; i < 144; i++) {
-      const s = document.createElement('span');
-      s.textContent = '0x' + i.toString(16).padStart(4, '0');
-      grid.appendChild(s);
-    }
-  }
 }
 
 /* ── CRAFTTIMELOG ── */
 function renderCraftTimeLog(el) {
-  /* This page uses light-mode */
   document.body.classList.add('light-mode');
 
-  el.innerHTML = `
-    <main class="ctl-page">
-      <div class="ctl-wrap" style="position:relative;overflow:hidden;">
-        <div class="ctl-glow-1"></div>
-        <div class="ctl-glow-2"></div>
-        <div class="ctl-hero">
-          <div class="ctl-icon-wrap">${ICON.clock}</div>
-          <div class="ctl-title">Craft<span>Time</span>Log</div>
-          <p class="ctl-subtitle">The professional-grade, minimalist, and offline-first time tracker
-          designed for creators who value their flow state.</p>
-          <button class="ctl-download">${ICON.download} Download Stable V1.0</button>
-          <div class="ctl-screenshots">
-            <div class="ctl-ss-grid">
-              <div class="ctl-ss-item"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Main Interface" loading="lazy"></div>
-              <div class="ctl-ss-item"><img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=800" alt="Analytics View" loading="lazy"></div>
-              <div class="ctl-ss-item"><img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=800" alt="Settings" loading="lazy"></div>
-            </div>
-            <div class="ctl-platform-row">
-              <div class="ctl-platform"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Desktop Optimized</div>
-              <div class="ctl-platform"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Tablet Support</div>
-              <div class="ctl-platform"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Mobile Sync</div>
-            </div>
-          </div>
-        </div>
-        <div class="ctl-features">
-          <div class="ctl-feature">
-            <div class="ctl-feature-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <h3>Zero Friction</h3>
-            <p>Forget complex forms. Start tracking instantly with global hotkeys or one-click interactions.</p>
-          </div>
-          <div class="ctl-feature">
-            <div class="ctl-feature-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <h3>Vault Storage</h3>
-            <p>Your data never leaves your machine. Local-only JSON layers ensure absolute privacy.</p>
-          </div>
-          <div class="ctl-feature">
-            <div class="ctl-feature-icon"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-            <h3>Deep Layers</h3>
-            <p>Categorize your work by focus intensity and project hierarchy for granular insights.</p>
-          </div>
-        </div>
-        <div class="ctl-cta">
-          <div class="ctl-cta-text">
-            <h2>Focus on the Work,<br>Not the Tracker.</h2>
-            <p>Built for internal use and now available externally. Professional, proprietary, and precise.</p>
-          </div>
-          <div class="ctl-timer-box">
-            <div class="ctl-timer-display" id="timerDisplay">00:00:00</div>
-            <div class="ctl-timer-label">Active Craft Session</div>
-            <div class="ctl-progress-bar"><div class="ctl-progress-fill"></div></div>
-          </div>
-        </div>
-      </div>
-    </main>
-  `;
+  const CTL_DOWNLOAD = 'https://www.mediafire.com/file/pib7nub82azkfoj/CraftTimeLog.zip/file';
 
-  /* Timer */
-  let secs = 0;
-  setInterval(() => {
-    secs++;
-    const h = String(Math.floor(secs / 3600)).padStart(2, '0');
-    const m = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
-    const s = String(secs % 60).padStart(2, '0');
-    const disp = document.getElementById('timerDisplay');
-    if (disp) disp.textContent = `${h}:${m}:${s}`;
-  }, 1000);
+  el.innerHTML = `
+    <div class="ctl-page">
+      <div class="ctl-wrap">
+
+        <!-- Hero -->
+        <div class="ctl-hero">
+          <div class="ctl-brand">
+            <img src="img/ctl-icon.png" alt="CraftTimeLog icon" class="ctl-brand-icon">
+            <div class="ctl-brand-text">
+              <span class="ctl-brand-name">CraftTimeLog</span>
+              <span class="ctl-brand-version">v1.1.0</span>
+            </div>
+          </div>
+          <h1 class="ctl-title">Track Your Time.<br><span>Not Your Users.</span></h1>
+          <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work — without signing up, logging in, or being analyzed.</p>
+          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download">
+            ${ICON.download}
+            <span>Download Free — v1.1.0</span>
+            <span class="ctl-dl-os">${ICON.windows} Windows</span>
+          </a>
+          <p class="ctl-hero-note">No installation required &nbsp;&middot;&nbsp; No account &nbsp;&middot;&nbsp; No internet &nbsp;&middot;&nbsp; ~150MB</p>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="ctl-screenshots">
+          <div class="ctl-ss-grid">
+            <div class="ctl-ss-item"><img src="img/ctl-ss01.jpg" alt="CraftTimeLog — Classic Light theme" loading="lazy"></div>
+            <div class="ctl-ss-item"><img src="img/ctl-ss02.jpg" alt="CraftTimeLog — Classic Dark theme with Pomodoro" loading="lazy"></div>
+            <div class="ctl-ss-item"><img src="img/ctl-ss03.jpg" alt="CraftTimeLog — Customization panel" loading="lazy"></div>
+          </div>
+        </div>
+
+        <!-- Philosophy -->
+        <div class="ctl-section ctl-section--philosophy">
+          <blockquote class="ctl-quote">
+            "I didn't want a website, an account, cloud syncing or something spying on me like I'm plotting cybercrime. I wanted portable, lightweight, no tracking, no nonsense. Just press button, track time, done."
+          </blockquote>
+          <p class="ctl-quote-attr">— The developer, about why this exists</p>
+        </div>
+
+        <!-- Features -->
+        <div class="ctl-section">
+          <div class="ctl-section-label">Features</div>
+          <h2 class="ctl-section-title">Everything You Need.<br>Nothing You Don't.</h2>
+          <p class="ctl-section-sub">Simpler than the competition, not weaker. Every feature is there because it's genuinely useful — not to fill a pricing tier.</p>
+          <div class="ctl-features-grid">
+            <div class="ctl-feature-item">
+              <div class="ctl-feature-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <strong>Multiple Projects</strong>
+                <p>Create, edit, reset and delete as many workspaces as you need.</p>
+              </div>
+            </div>
+            <div class="ctl-feature-item">
+              <div class="ctl-feature-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Session Logs</strong>
+                <p>Full history of every session. Edit, comment or delete individual logs.</p>
+              </div>
+            </div>
+            <div class="ctl-feature-item">
+              <div class="ctl-feature-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+              </div>
+              <div>
+                <strong>Pomodoro Mode</strong>
+                <p>Built-in Pomodoro timer with configurable work/break intervals.</p>
+              </div>
+            </div>
+            <div class="ctl-feature-item">
+              <div class="ctl-feature-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              </div>
+              <div>
+                <strong>Alarm System</strong>
+                <p>Set an alarm with 6 distinct alert sounds to stay on schedule.</p>
+              </div>
+            </div>
+            <div class="ctl-feature-item">
+              <div class="ctl-feature-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+              </div>
+              <div>
+                <strong>CSV Export</strong>
+                <p>Export any project's log to CSV. Opens in Excel, Google Sheets, LibreOffice.</p>
+              </div>
+            </div>
+            <div class="ctl-feature-item">
+              <div class="ctl-feature-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <div>
+                <strong>Themes &amp; Customization</strong>
+                <p>5 built-in visual themes plus a full custom theme creator.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Use cases -->
+        <div class="ctl-section ctl-section--uses">
+          <div class="ctl-section-label">Who It's For</div>
+          <h2 class="ctl-section-title">Useful for anyone who makes things.</h2>
+          <div class="ctl-uses-row">
+            <span class="ctl-use-tag">Game Dev</span>
+            <span class="ctl-use-tag">Coding</span>
+            <span class="ctl-use-tag">Writing</span>
+            <span class="ctl-use-tag">Design</span>
+            <span class="ctl-use-tag">Music</span>
+            <span class="ctl-use-tag">Freelancing</span>
+            <span class="ctl-use-tag">Studying</span>
+            <span class="ctl-use-tag">Proving you weren't just "thinking about working" for three hours</span>
+          </div>
+        </div>
+
+        <!-- System requirements -->
+        <div class="ctl-section ctl-section--sysreq">
+          <div class="ctl-sysreq-box">
+            <div class="ctl-sysreq-icon">${ICON.windows}</div>
+            <div class="ctl-sysreq-content">
+              <h3>System Requirements</h3>
+              <ul class="ctl-sysreq-list">
+                <li>Windows 7, 8, 10, or 11 (64-bit)</li>
+                <li>No installation — run directly from the folder</li>
+                <li>No internet connection required</li>
+                <li>~150 MB disk space</li>
+                <li>1024×768 minimum resolution</li>
+              </ul>
+              <p class="ctl-sysreq-note">Save data and preferences are stored locally alongside the app. Themes and settings persist between sessions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="ctl-cta-section">
+          <h2 class="ctl-cta-title">It's free. Just download it.</h2>
+          <p class="ctl-cta-sub">Built for personal use, shared because why not. No ads, no upsell, no telemetry.</p>
+          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download ctl-download--large">
+            ${ICON.download}
+            <span>Download CraftTimeLog v1.1.0</span>
+            <span class="ctl-dl-os">${ICON.windows} Windows — Free</span>
+          </a>
+          <p class="ctl-cta-fine">A free tool by <strong>Vanta Layer Systems</strong></p>
+        </div>
+
+      </div>
+    </div>
+  `;
 }
 
 /* ══════════════════════════════════════════════════════════
-   ROUTER — reads data-page on <main> and renders
+   ROUTER
    ══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
