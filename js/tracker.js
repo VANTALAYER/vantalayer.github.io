@@ -1,11 +1,9 @@
 /* ══════════════════════════════════════════
    tracker.js — click analytics via Google Sheets
-   Set TRACKER_URL to your Apps Script deployment URL
    ══════════════════════════════════════════ */
 
 const TRACKER_URL = 'https://script.google.com/macros/s/AKfycbyqUevV5bAG_MtkY39O4RGm66yaIg-E18luZ3-bKBj6a0ilTKkA3Prinz-xmWyiz6BXtA/exec';
 
-/* ── Detect OS from user agent ── */
 function getOS() {
   const ua = navigator.userAgent;
   if (ua.includes('Windows'))  return 'Windows';
@@ -16,7 +14,6 @@ function getOS() {
   return 'Unknown';
 }
 
-/* ── Detect browser from user agent ── */
 function getBrowser() {
   const ua = navigator.userAgent;
   if (ua.includes('Edg'))     return 'Edge';
@@ -27,7 +24,6 @@ function getBrowser() {
   return 'Unknown';
 }
 
-/* ── Get country/city from ipapi (same service contact form uses) ── */
 async function getGeo() {
   try {
     const r = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) });
@@ -39,14 +35,13 @@ async function getGeo() {
   return { country: '', city: '' };
 }
 
-/* ── Fire a tracking event ── */
 async function trackEvent(eventName) {
   if (!TRACKER_URL || TRACKER_URL.includes('REPLACE_WITH')) return;
 
   const page = window.location.pathname.split('/').pop() || 'index.html';
   const geo  = await getGeo();
 
-  const payload = {
+  const params = new URLSearchParams({
     event:    eventName,
     page:     page.replace('.html', '') || 'home',
     browser:  getBrowser(),
@@ -54,23 +49,19 @@ async function trackEvent(eventName) {
     country:  geo.country,
     city:     geo.city,
     referrer: document.referrer || 'direct',
-  };
+  });
 
-  /* Use sendBeacon for reliability — fires even if user navigates away immediately */
-  const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon(TRACKER_URL, blob);
-  } else {
-    fetch(TRACKER_URL, { method: 'POST', body: JSON.stringify(payload) }).catch(() => {});
-  }
+  /* GET + no-cors: fires cleanly through GAS redirects, no CORS block */
+  fetch(TRACKER_URL + '?' + params.toString(), {
+    method: 'GET',
+    mode:   'no-cors',
+  }).catch(() => {});
 }
 
-/* ── Auto-attach to elements with data-track attribute ── */
 function initTracker() {
   document.querySelectorAll('[data-track]').forEach(el => {
     el.addEventListener('click', () => trackEvent(el.dataset.track));
   });
 }
 
-/* ── Re-run after pages.js renders content (content is injected dynamically) ── */
 window.initTracker = initTracker;
