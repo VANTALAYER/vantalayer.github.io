@@ -565,6 +565,14 @@ async function renderCraftTimeLog(el) {
      if (typeof window.initTracker === 'function') {
     window.initTracker();
   }
+
+  /* Re-attach backdrop click for the patch note modal since it renders after DOMContentLoaded */
+  const patchModal = document.getElementById('modal-ctl-patchnote');
+  if (patchModal) {
+    patchModal.addEventListener('click', e => {
+      if (e.target === patchModal) { patchModal.classList.remove('open'); document.body.style.overflow = ''; }
+    });
+  }
 }
 
 /* ══════════════════════════════════════════════════════════
