@@ -381,14 +381,14 @@ function renderCraftTimeLog(el) {
         <!-- Hero -->
         <div class="ctl-hero">
           <div class="ctl-brand">
-            <img src="img/ctl-icon.png" alt="CraftTimeLog icon" class="ctl-brand-icon">
+            <img src="img/CTLicon.png" alt="CraftTimeLog icon" class="ctl-brand-icon">
             <div class="ctl-brand-text">
               <span class="ctl-brand-name">CraftTimeLog</span>
               <span class="ctl-brand-version">v1.1.0</span>
             </div>
           </div>
           <h1 class="ctl-title">Track Your Time.<br><span>Not Your Users.</span></h1>
-          <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work — without signing up, logging in, or being analyzed.</p>
+          <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work without signing up, logging in, or being analyzed.</p>
           <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download">
             ${ICON.download}
             <span>Download Free — v1.1.0</span>
@@ -400,9 +400,9 @@ function renderCraftTimeLog(el) {
         <!-- Screenshots -->
         <div class="ctl-screenshots">
           <div class="ctl-ss-grid">
-            <div class="ctl-ss-item"><img src="img/ctl-ss01.jpg" alt="CraftTimeLog — Classic Light theme" loading="lazy"></div>
-            <div class="ctl-ss-item"><img src="img/ctl-ss02.jpg" alt="CraftTimeLog — Classic Dark theme with Pomodoro" loading="lazy"></div>
-            <div class="ctl-ss-item"><img src="img/ctl-ss03.jpg" alt="CraftTimeLog — Customization panel" loading="lazy"></div>
+            <div class="ctl-ss-item"><img src="img/CTL-ss01.jpg" alt="CraftTimeLog — Classic Light theme" loading="lazy"></div>
+            <div class="ctl-ss-item"><img src="img/CTL-ss02.jpg" alt="CraftTimeLog — Classic Dark theme with Pomodoro" loading="lazy"></div>
+            <div class="ctl-ss-item"><img src="img/CTL-ss03.jpg" alt="CraftTimeLog — Customization panel" loading="lazy"></div>
           </div>
         </div>
 
@@ -411,14 +411,14 @@ function renderCraftTimeLog(el) {
           <blockquote class="ctl-quote">
             "I didn't want a website, an account, cloud syncing or something spying on me like I'm plotting cybercrime. I wanted portable, lightweight, no tracking, no nonsense. Just press button, track time, done."
           </blockquote>
-          <p class="ctl-quote-attr">— The developer, about why this exists</p>
+          <p class="ctl-quote-attr">— RedSig, Lead Designer, about why this exists</p>
         </div>
 
         <!-- Features -->
         <div class="ctl-section">
           <div class="ctl-section-label">Features</div>
           <h2 class="ctl-section-title">Everything You Need.<br>Nothing You Don't.</h2>
-          <p class="ctl-section-sub">Simpler than the competition, not weaker. Every feature is there because it's genuinely useful — not to fill a pricing tier.</p>
+          <p class="ctl-section-sub">Simpler than the competition, not weaker. Every feature is there because it's genuinely useful, not to fill a pricing tier.</p>
           <div class="ctl-features-grid">
             <div class="ctl-feature-item">
               <div class="ctl-feature-icon">
@@ -501,12 +501,12 @@ function renderCraftTimeLog(el) {
               <h3>System Requirements</h3>
               <ul class="ctl-sysreq-list">
                 <li>Windows 7, 8, 10, or 11 (64-bit)</li>
-                <li>No installation — run directly from the folder</li>
+                <li>No installation - run directly from the folder</li>
                 <li>No internet connection required</li>
-                <li>~150 MB disk space</li>
+                <li>~120 MB disk space</li>
                 <li>1024×768 minimum resolution</li>
               </ul>
-              <p class="ctl-sysreq-note">Save data and preferences are stored locally alongside the app. Themes and settings persist between sessions.</p>
+              <p class="ctl-sysreq-note">Save data and preferences are stored locally alongside the app and settings persist between sessions.</p>
             </div>
           </div>
         </div>
