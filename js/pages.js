@@ -389,7 +389,7 @@ function renderCraftTimeLog(el) {
             </div>
           </div>
           <h1 class="ctl-title">Track Your Time.<br><span>Keep Your Privacy.</span></h1>
-          <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work without signing up, logging in, or being analyzed.</p>
+          <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work without signing up, logging in, or being spied on.</p>
           <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download">
             ${ICON.download}
             <span>Download Free — v1.1.0</span>
