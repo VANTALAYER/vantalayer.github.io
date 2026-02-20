@@ -1,0 +1,33 @@
+v1.2.0  —  Connected
+─────────────────────────────
+• App now checks for updates automatically on startup
+• Update banner appears when a new version is available
+• Download link added to patch notes when update is available
+• Version number is now centralized
+• Added X (Twitter) button in the top bar
+• Hover effect on ⓘ and 𝕏 buttons
+• Some UI polish
+
+v1.1.0  -  Polish & Fixes
+─────────────────────────────
+• Fixed gradient themes not rendering correctly
+• Updated Classic Dark theme with a refined gradient
+• Updated Gaben theme gradient colors
+• Added patch notes window (you're reading it!)
+• Added ⓘ button in the top bar to access patch notes
+
+v1.0.1
+─────────────────────────────
+• CTL logo, app title and copyright are now clickable links to VANTA LAYER Systems on X
+
+v1.0.0  —  Initial Release
+─────────────────────────────
+• First public release of CraftTimeLog
+• Project workspace management
+• Session tracking with pause/resume
+• Session log with edit/delete
+• Pomodoro mode
+• Theme system with 5 built-in themes
+• Custom theme creation (up to 5)
+• CSV export
+• Alert sound options
