@@ -23,14 +23,26 @@ const LINKS = {
    url → your Reddit post link
    ══════════════════════════════════════════════════════════ */
 const DEVLOG_ENTRIES = [
-  /* Example — uncomment and fill in when you have a real post:
+  /* Example — uncomment and fill in when you have a real post:*/
+   {
+    num:   '#003',
+    title: 'Everything Is Upgradable Now & Realism Has to Compromise',
+    date:  'Feb 8 2026',
+    url:   'https://www.reddit.com/r/SHELLHACK/comments/1r7ned8/devlog_003_everything_is_upgradable_now_realism/',
+  },
+   {
+    num:   '#002',
+    title: 'The Terminal Gets Serious',
+    date:  'Feb 10 2026',
+    url:   'https://www.reddit.com/r/SHELLHACK/comments/1r0oxhs/devlog_002_the_terminal_gets_serious/',
+  },
   {
     num:   '#001',
-    title: 'Why I\'m Building SHELLHACK',
-    date:  'Feb 2025',
-    url:   'https://www.reddit.com/r/SHELLHACK/comments/XXXXXXX/why_im_building_shellhack/',
+    title: 'Wrapping up Vynamp — SHELLHACK\’s in-game music & radio system',
+    date:  'Jan 29 2026',
+    url:   'https://www.reddit.com/r/SHELLHACK/comments/1qos862/devlog_wrapping_up_vynamp_shellhacks_ingame_music/',
   },
-  */
+  
 ];
 
 /* ══════════════════════════════════════════════════════════
