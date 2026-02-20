@@ -3,7 +3,7 @@
    Set TRACKER_URL to your Apps Script deployment URL
    ══════════════════════════════════════════ */
 
-const TRACKER_URL = 'https://script.google.com/macros/s/REPLACE_WITH_YOUR_APPS_SCRIPT_URL/exec';
+const TRACKER_URL = 'https://script.google.com/macros/s/AKfycbyqUevV5bAG_MtkY39O4RGm66yaIg-E18luZ3-bKBj6a0ilTKkA3Prinz-xmWyiz6BXtA/exec';
 
 /* ── Detect OS from user agent ── */
 function getOS() {
