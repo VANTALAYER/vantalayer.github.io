@@ -2,7 +2,7 @@
    tracker.js — click analytics via Google Sheets
    ══════════════════════════════════════════ */
 
-const TRACKER_URL = 'https://script.google.com/macros/s/AKfycbyqUevV5bAG_MtkY39O4RGm66yaIg-E18luZ3-bKBj6a0ilTKkA3Prinz-xmWyiz6BXtA/exec';
+const TRACKER_URL = 'https://script.google.com/macros/s/AKfycbz6Di4aVpPlDTMKYLy6rs-7ES2SUGrIepemRu9W3w9cVn7r0CkoAdk6mOTOSogSH2yN2g/exec';
 
 function getOS() {
   const ua = navigator.userAgent;
