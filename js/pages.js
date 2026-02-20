@@ -82,7 +82,7 @@ function renderHome(el) {
         </div>
         <div class="game-desc">
           <p>A deep hacking simulation inspired by Hacknet and Uplink. Infiltrate secure networks,
-          manipulate encrypted data and master the system from the shadows — then be tested,
+          manipulate encrypted data and master the system from the shadows, be tested,
           pushed to your limits, and gripped by the most thrilling story in the genre yet.</p>
         </div>
       </div>
