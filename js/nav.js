@@ -147,7 +147,7 @@ function buildModals() {
         <p><strong>Usage:</strong> Contact data is used solely to respond to your message. It is never sold or shared with third parties except as required by law.</p>
         <p><strong>Third-party platforms:</strong> Links to Reddit and X/Twitter are governed by their own privacy policies.</p>
         <p><strong>Retention:</strong> Contact submissions are retained for up to 12 months.</p>
-        <p><strong>Your rights:</strong> You may request deletion of your data at any time at vantalayer@gmail.com.</p>
+        <p><strong>Your rights:</strong> You may request deletion of your data at any time at contact+privacy@vantalayer.xyz.</p>
       </div>
     </div>
     <div class="modal-overlay" id="modal-terms">
