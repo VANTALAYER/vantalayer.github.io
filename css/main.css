@@ -104,7 +104,7 @@ body.light-mode .logo-img-wrap .logo-light { display: block; }
 .logo-wordmark { display: flex; flex-direction: column; justify-content: center; line-height: 1; }
 .logo-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: #fff; }
 body.light-mode .logo-name { color: #000; }
-.logo-sub { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 3px; color: #696969; margin-top: 3px; text-transform: uppercase; }
+.logo-sub { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; color: #696969; margin-top: 3px; text-transform: uppercase; }
 
 /* Nav links */
 .nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
