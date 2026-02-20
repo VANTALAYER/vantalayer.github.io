@@ -33,8 +33,8 @@ function buildNav() {
     <div class="nav-inner">
       <a class="logo-lockup" href="${root('index.html')}" aria-label="Vanta Layer home">
         <div class="logo-img-wrap">
-          <img class="logo-dark"  src="${root('img/logo-white.jpg')}" alt="Vanta Layer">
-          <img class="logo-light" src="${root('img/logo-black.jpg')}" alt="Vanta Layer">
+          <img class="logo-dark"  src="${root('img/logo-white.png')}" alt="Vanta Layer">
+          <img class="logo-light" src="${root('img/logo-black.png')}" alt="Vanta Layer">
         </div>
         <div class="logo-wordmark">
           <span class="logo-name">VANTA LAYER</span>
@@ -50,7 +50,7 @@ function buildNav() {
           <div class="dropdown" role="menu">
             <a href="${SHELLHACK_REDDIT}" target="_blank" rel="noopener" class="dd-item" role="menuitem">
               <div class="dd-thumb">
-                <img src="${root('img/shellhack-logo.jpg')}" alt="SHELLHACK">
+                <img src="${root('img/shellhack-logo.png')}" alt="SHELLHACK">
               </div>
               <div>
                 <span class="dd-label">SHELLHACK</span>
@@ -112,7 +112,7 @@ function buildFooter() {
     <div class="footer-inner">
       <div class="footer-left">
         <div class="footer-logo-row">
-          <img class="footer-logo-img" src="${root('img/logo-white.jpg')}" alt="Vanta Layer">
+          <img class="footer-logo-img" src="${root('img/logo-white.png')}" alt="Vanta Layer">
           <span class="footer-wordmark">VANTA LAYER</span>
         </div>
         <div class="footer-copy">&copy; 2025&ndash;${new Date().getFullYear()}&ensp;Vanta Layer Systems&ensp;&mdash;&ensp;All Rights Reserved</div>
