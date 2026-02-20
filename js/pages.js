@@ -290,8 +290,10 @@ function renderVantaCore(el) {
 
       <!-- What it does -->
       <div class="vc-section vc-section--dark">
+        <div style="max-width:1280px;margin:0 auto;">
         <div class="section-tag">Capabilities</div>
         <h2 class="vc-section-title">What VantaCore Does</h2>
+        </div>
         <div class="vc-pillars">
           <div class="vc-pillar">
             <div class="vc-pillar-icon">
