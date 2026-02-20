@@ -252,12 +252,12 @@ function renderVantaCore(el) {
       <div class="vc-hero-banner">
         <div class="vc-hero-noise"></div>
         <div class="vc-hero-content">
-          <img src="img/vantacore-logo.png" alt="VantaCore" class="vc-logo-img">
+          <img src="img/VantaCore-logo.png" alt="VantaCore" class="vc-logo-img">
           <p class="vc-hero-tagline">Proprietary Game Framework by Vanta Layer Systems</p>
           <div class="vc-hero-tags">
             <span class="vc-tag">In-House</span>
             <span class="vc-tag">2D / Management / Sim</span>
-            <span class="vc-tag">Not Publicly Available</span>
+            <span class="vc-tag">Not Publicly Available Yet</span>
           </div>
         </div>
       </div>
@@ -268,8 +268,8 @@ function renderVantaCore(el) {
           <div class="vc-text-block">
             <div class="section-tag">Origin</div>
             <h2 class="vc-section-title">Built Out of Necessity</h2>
-            <p>VantaCore was born while building <strong>SHELLHACK</strong>. VB.Net — the language powering our projects — was never designed with game development in mind, and its limitations started showing fast. Rather than fight the tools, we built our own layer on top.</p>
-            <p>What started as a set of workarounds became a proper framework — one that handles the exact types of games we make: <strong>management-heavy, simulation-driven, data-rich</strong> experiences where performance and stability matter more than flashy rendering.</p>
+            <p>VantaCore was born while building <strong>SHELLHACK</strong>. VB.Net was never designed with game development in mind, and its limitations started showing fast. Rather than fight the tools, we built our own layer on top.</p>
+            <p>What started as a set of workarounds became a proper framework. One that handles the exact types of games we make: <strong>management-heavy, simulation-driven, data-rich</strong> experiences where performance and stability and deepness matter.</p>
           </div>
           <div class="vc-stat-stack">
             <div class="vc-stat">
@@ -278,11 +278,11 @@ function renderVantaCore(el) {
             </div>
             <div class="vc-stat">
               <div class="vc-stat-value">1</div>
-              <div class="vc-stat-label">Game already running on it — SHELLHACK.</div>
+              <div class="vc-stat-label">Game already running on it: SHELLHACK.</div>
             </div>
             <div class="vc-stat">
               <div class="vc-stat-value">∞</div>
-              <div class="vc-stat-label">Designed to scale across all future Vanta Layer projects.</div>
+              <div class="vc-stat-label">Designed to scale across future VANTA LAYER projects.</div>
             </div>
           </div>
         </div>
@@ -304,15 +304,15 @@ function renderVantaCore(el) {
             <div class="vc-pillar-icon">
               <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
             </div>
-            <h3>Scalable Save System</h3>
-            <p>Data-driven save architecture that handles complex game states cleanly — designed to evolve as the game grows.</p>
+            <h3>Scalable System</h3>
+            <p>Data-driven architecture that handles complex game states cleanly, designed to evolve as the game grows.</p>
           </div>
           <div class="vc-pillar">
             <div class="vc-pillar-icon">
               <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
             <h3>Performance-First</h3>
-            <p>Optimized for management and simulation workloads: many systems, many entities, many state changes — without stuttering.</p>
+            <p>Optimized for management and simulation workloads with many systems, many entities and many state changes.</p>
           </div>
           <div class="vc-pillar">
             <div class="vc-pillar-icon">
@@ -346,19 +346,19 @@ function renderVantaCore(el) {
               <span class="vc-status-dot"></span>
               <span class="vc-status-label">Current Status: Framework</span>
             </div>
-            <p>VantaCore is an active, evolving framework — not a finished product. It is proprietary technology, used exclusively inside Vanta Layer Systems. There are no plans to release it publicly at this time.</p>
+            <p>VantaCore is an active, evolving framework, not a finished product. It is proprietary technology, used exclusively inside VANTA LAYER Systems at this time.</p>
             <div class="vc-status-bar-row">
               <span>Framework</span>
               <div class="vc-progress"><div class="vc-progress-fill" style="width:65%"></div></div>
               <span>Engine</span>
             </div>
-            <p class="vc-status-note">Development continues in parallel with SHELLHACK. The roadmap points toward a full engine capable of powering every future Vanta Layer title.</p>
+            <p class="vc-status-note">Development continues in parallel with SHELLHACK. The roadmap points toward a full engine capable of powering future VANTA LAYER title.</p>
           </div>
           <div class="vc-text-block">
             <div class="section-tag">Roadmap</div>
             <h2 class="vc-section-title">Where It's Going</h2>
             <p>VantaCore will continue to grow alongside our games. Each new feature we need for SHELLHACK or future projects gets built into the framework, making the next game faster to build.</p>
-            <p>The goal isn't to compete with Unity or Godot. It's to have a tool that is <strong>100% shaped around the games we make</strong> — no wasted features, no forced workflows, no license negotiations.</p>
+            <p>The goal isn't to compete with Unity or Godot. It's to have a tool that is <strong>100% shaped around the games we make</strong>, no wasted features, no forced workflows, no license negotiations.</p>
             <p>Proprietary. Focused. Ours.</p>
           </div>
         </div>
