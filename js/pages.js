@@ -375,10 +375,29 @@ function renderVantaCore(el) {
 }
 
 /* ── CRAFTTIMELOG ── */
-function renderCraftTimeLog(el) {
+async function renderCraftTimeLog(el) {
   document.body.classList.add('light-mode');
 
-  const CTL_DOWNLOAD = 'https://www.mediafire.com/file/pib7nub82azkfoj/CraftTimeLog.zip/file';
+  const CTL_DOWNLOAD  = 'https://www.mediafire.com/file/pib7nub82azkfoj/CraftTimeLog.zip/file';
+  const VERSION_URL   = 'https://vantalayer.xyz/ctl/version.txt';
+  const PATCHNOTE_URL = 'https://vantalayer.xyz/ctl/patchnote.txt';
+
+  /* Fetch version and patch notes in parallel, then render */
+  let currentVersion  = '1.1.0';   /* fallback */
+  let patchNoteText   = 'Loading patch notes…';
+
+  async function fetchCTLData() {
+    try {
+      const [vRes, pRes] = await Promise.all([
+        fetch(VERSION_URL  + '?t=' + Date.now()),
+        fetch(PATCHNOTE_URL + '?t=' + Date.now()),
+      ]);
+      if (vRes.ok) currentVersion = (await vRes.text()).trim();
+      if (pRes.ok) patchNoteText  = (await pRes.text()).trim();
+    } catch (_) { /* keep fallbacks */ }
+  }
+
+  await fetchCTLData();
 
   el.innerHTML = `
     <div class="ctl-page">
@@ -396,10 +415,13 @@ function renderCraftTimeLog(el) {
           <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work without signing up, logging in, or being spied on.</p>
           <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download" data-track="ctl-download-hero">
             ${ICON.download}
-            <span>Download Free — v1.1.0</span>
+            <span>Download Free — v${currentVersion}</span>
             <span class="ctl-dl-os">${ICON.windows} Windows</span>
           </a>
-          <p class="ctl-hero-note">No installation required &nbsp;&middot;&nbsp; No account &nbsp;&middot;&nbsp; No internet &nbsp;&middot;&nbsp; ~120MB</p>
+          <div class="ctl-hero-actions">
+            <p class="ctl-hero-note">No installation required &nbsp;&middot;&nbsp; No account &nbsp;&middot;&nbsp; No internet &nbsp;&middot;&nbsp; ~150MB</p>
+            <button class="ctl-patchnote-btn" onclick="openModal('ctl-patchnote')">Patch Notes</button>
+          </div>
         </div>
 
         <!-- Screenshots -->
@@ -522,12 +544,20 @@ function renderCraftTimeLog(el) {
           <p class="ctl-cta-sub">Built for personal use, shared because why not. No ads, no upsell, no telemetry.</p>
           <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download ctl-download--large" data-track="ctl-download-cta">
             ${ICON.download}
-            <span>Download CraftTimeLog v1.1.0</span>
+            <span>Download CraftTimeLog v${currentVersion}</span>
             <span class="ctl-dl-os">${ICON.windows} Windows - Free</span>
           </a>
           <p class="ctl-cta-fine">A free tool by <strong>Vanta Layer Systems</strong></p>
         </div>
 
+      </div>
+    </div>
+    <!-- Patch Note Modal -->
+    <div class="modal-overlay" id="modal-ctl-patchnote">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeModal('ctl-patchnote')">&times;</button>
+        <h2>Patch Notes</h2>
+        <pre class="ctl-patchnote-content">${patchNoteText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
       </div>
     </div>
   `;
