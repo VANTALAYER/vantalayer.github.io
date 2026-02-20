@@ -73,7 +73,7 @@ function renderHome(el) {
         </div>
         <div class="hero-meta">
           <div class="hero-title-block">
-            <div class="game-title">SHELLHACK</div>
+            <h2 class="section-title">SHELLHACK</h2>
             <div class="game-status">&#x25CF;&nbsp; Under Development &mdash; Coming Soon</div>
           </div>
           <a href="${LINKS.reddit}" target="_blank" rel="noopener" class="btn-community">
