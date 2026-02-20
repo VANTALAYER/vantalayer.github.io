@@ -109,18 +109,16 @@ function renderHome(el) {
           <div class="about-text">
             <div class="section-tag">Core Identity</div>
             <h2 class="section-title">The Vanta<br>Philosophy</h2>
-            <p><strong>VANTA</strong> represents the blackest black — the absolute absence of compromise.
+            <p><strong>VANTA</strong> represents the blackest black, the absolute absence of compromise.
             A small indie studio out of Montréal, Canada, built on the belief that games should go deep,
             not just wide.</p>
-            <p>The <strong>LAYER</strong> signifies the depth of the work — games that live in the
+            <p>The <strong>LAYER</strong> signifies the depth of the work, games that live mostly in the
             management and simulation niche. Whether you're running a massive corporation or hacking
-            into one, there is always another layer to peel back and master.</p>
+            into one, there is always another layer to peel back.</p>
             <p>Together, <strong>VANTA + LAYER</strong> represent a core belief: that the best games
-            take you to the deepest layer of a subject — not just the surface. The goal is for players
-            to feel like they actually understand something by the time they're done.</p>
-            <p>The <strong>SYSTEMS</strong> are the bedrock. Custom tools — like <strong>VantaCore</strong>
-            and others — exist because off-the-shelf solutions were never built for this kind of depth.
-            Primarily a game studio, the tech built along the way sometimes gets released too.</p>
+            take you to the deepest layer of a subject, not just the surface.</p>
+            <p>The <strong>SYSTEMS</strong> are the bedrock. Custom tools, like <strong>VantaCore</strong>
+            and others apps exist because off-the-shelf solutions are not always built for us.</p>
           </div>
           <div class="about-visual">
             <div class="about-glow"></div>
