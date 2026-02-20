@@ -273,7 +273,7 @@ function renderVantaCore(el) {
             <div class="section-tag">Origin</div>
             <h2 class="vc-section-title">Built Out of Necessity</h2>
             <p>VantaCore was born while building <strong>SHELLHACK</strong>. VB.Net was never designed with game development in mind, and its limitations started showing fast. Rather than fight the tools, we built our own layer on top.</p>
-            <p>What started as a set of workarounds became a proper framework. One that handles the exact types of games we make: <strong>management-heavy, simulation-driven, data-rich</strong> experiences where performance and stability and deepness matter.</p>
+            <p>What started as a set of workarounds became a proper framework. One that handles the exact types of games we make: <strong>management-heavy, simulation-driven, data-rich</strong> experiences where performance, stability and deepness matter.</p>
           </div>
           <div class="vc-stat-stack">
             <div class="vc-stat">
