@@ -8,7 +8,6 @@ const X_THEREDSIG      = 'https://x.com/theredsig';
 
 /* ── Detect root path so links work from any sub-page ── */
 function root(path) {
-  /* Works on GitHub Pages where the site might live at /repo-name/ */
   const base = document.querySelector('meta[name="site-root"]');
   const r = base ? base.content : './';
   return r.replace(/\/$/, '') + '/' + path.replace(/^\//, '');
@@ -23,7 +22,6 @@ const SVG = {
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
   </svg>`,
   chevron: `<svg class="nav-chevron" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>`,
-  locPin:  `<svg width="18" height="18" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
 };
 
 /* ── Build navbar HTML ── */
@@ -50,7 +48,7 @@ function buildNav() {
           <div class="dropdown" role="menu">
             <a href="${SHELLHACK_REDDIT}" target="_blank" rel="noopener" class="dd-item" role="menuitem">
               <div class="dd-thumb">
-                <img src="${root('img/shellhack-logo-small.png')}" alt="SHELLHACK">
+                <img src="${root('img/shellhack-logo.png')}" alt="SHELLHACK">
               </div>
               <div>
                 <span class="dd-label">SHELLHACK</span>
@@ -105,14 +103,22 @@ function buildNav() {
   document.body.prepend(nav);
 }
 
-/* ── Build footer HTML ── */
+/* ── Build footer HTML ──
+   On light-mode pages (CraftTimeLog) the CSS already shows logo-black via mix-blend-mode:multiply.
+   We additionally swap the src to logo-black.png on light-mode pages for browsers
+   where blend-mode doesn't apply to images the same way. ── */
 function buildFooter() {
+  const isLight = document.body.classList.contains('light-mode')
+                  || document.querySelector('[data-page="crafttimelog"]') !== null;
+  const footerLogo = isLight ? root('img/logo-black.png') : root('img/logo-white.png');
+  const footerLogoClass = isLight ? 'footer-logo-img footer-logo-img--dark' : 'footer-logo-img';
+
   const footer = document.createElement('footer');
   footer.innerHTML = `
     <div class="footer-inner">
       <div class="footer-left">
         <div class="footer-logo-row">
-          <img class="footer-logo-img" src="${root('img/logo-white.png')}" alt="Vanta Layer">
+          <img class="${footerLogoClass}" src="${footerLogo}" alt="Vanta Layer">
           <span class="footer-wordmark">VANTA LAYER</span>
         </div>
         <div class="footer-copy">&copy; 2025&ndash;${new Date().getFullYear()}&ensp;Vanta Layer Systems&ensp;&mdash;&ensp;All Rights Reserved</div>
@@ -170,7 +176,7 @@ function buildModals() {
   document.body.appendChild(wrap);
 }
 
-/* ── Modal helpers — exposed globally ── */
+/* ── Modal helpers ── */
 window.openModal = function(id) {
   document.getElementById('modal-' + id).classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -180,7 +186,6 @@ window.closeModal = function(id) {
   document.body.style.overflow = '';
 };
 
-/* ── Close modal on backdrop click ── */
 function initModalBackdrop() {
   document.querySelectorAll('.modal-overlay').forEach(el => {
     el.addEventListener('click', e => {
@@ -189,7 +194,6 @@ function initModalBackdrop() {
   });
 }
 
-/* ── Highlight active nav link ── */
 function highlightNav() {
   const current = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
@@ -200,7 +204,6 @@ function highlightNav() {
   });
 }
 
-/* ── Init on DOM ready ── */
 document.addEventListener('DOMContentLoaded', () => {
   buildNav();
   buildFooter();
