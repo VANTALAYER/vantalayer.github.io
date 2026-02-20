@@ -360,7 +360,7 @@ function renderVantaCore(el) {
             <div class="section-tag">Roadmap</div>
             <h2 class="vc-section-title">Where It's Going</h2>
             <p>VantaCore will continue to grow alongside our games. Each new feature we need for SHELLHACK or future projects gets built into the framework, making the next game faster to build.</p>
-            <p>The goal isn't to compete with Unity or Godot. It's to have a tool that is <strong>100% shaped around the games we make</strong>, no wasted features, no forced workflows, no license negotiations.</p>
+            <p>The goal isn't to compete with Unity or Unreal. It's to have a tool that is <strong>100% shaped around the games we make</strong>, no wasted features, no forced workflows, no license negotiations.</p>
             <p>Proprietary. Focused. Ours.</p>
           </div>
         </div>
