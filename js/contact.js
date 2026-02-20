@@ -130,7 +130,7 @@ function initContactForm() {
         statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     } catch (err) {
-      statusEl.textContent = '✕ Network error. Please try again or email vantalayer@gmail.com directly.';
+      statusEl.textContent = '✕ Network error. Please try again or email contact@vantalayer.xyz directly.';
       statusEl.className = 'form-status error';
       statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
