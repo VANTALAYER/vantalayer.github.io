@@ -579,7 +579,9 @@ async function renderCraftTimeLog(el) {
     patchModal.addEventListener('click', e => {
       if (e.target === patchModal) { patchModal.classList.remove('open'); document.body.style.overflow = ''; }
     });
-     /* Lightbox helpers */
+  }
+
+  /* Lightbox helpers */
   window.openLightbox = function(src) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('modal-lightbox').classList.add('open');
@@ -589,7 +591,6 @@ async function renderCraftTimeLog(el) {
     document.getElementById('modal-lightbox').classList.remove('open');
     document.body.style.overflow = '';
   };
-  }
 }
 
 /* ══════════════════════════════════════════════════════════
