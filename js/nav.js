@@ -141,7 +141,7 @@ function buildModals() {
       <div class="modal-box">
         <button class="modal-close" onclick="closeModal('privacy')">&times;</button>
         <h2>Privacy Policy</h2>
-        <p><strong>Effective:</strong> January 1, 2025</p>
+        <p><strong>Effective:</strong> January 1, 2026</p>
         <p>Vanta Layer Systems is a game studio based in Montréal, Québec, Canada.</p>
         <p><strong>Data collected via contact form:</strong> name, email, message, and technical metadata (browser, OS, screen resolution, timezone, approximate session duration, referrer URL) for the purpose of responding to inquiries and filtering spam.</p>
         <p><strong>Data collected via click analytics:</strong> when you interact with certain links and buttons on this site, we record which element was clicked, the page it was on, your browser, OS, approximate location (country and city via IP lookup), and referrer. This data is stored privately in our own analytics system and is used solely to understand how visitors use the site. It is never sold or shared.</p>
@@ -155,7 +155,7 @@ function buildModals() {
       <div class="modal-box">
         <button class="modal-close" onclick="closeModal('terms')">&times;</button>
         <h2>Terms of Use</h2>
-        <p><strong>Effective:</strong> January 1, 2025</p>
+        <p><strong>Effective:</strong> January 1, 2026</p>
         <p>By using this site you agree to these terms. This site is operated by Vanta Layer Systems, Montréal, Canada.</p>
         <p><strong>Intellectual property:</strong> All content — logos, images, game assets, text — is the property of Vanta Layer Systems and may not be reproduced without written permission.</p>
         <p><strong>No warranties:</strong> This site is provided as-is. No guarantees are made regarding availability, accuracy, or completeness.</p>
@@ -167,7 +167,7 @@ function buildModals() {
       <div class="modal-box">
         <button class="modal-close" onclick="closeModal('cookies')">&times;</button>
         <h2>Cookie Policy</h2>
-        <p><strong>Effective:</strong> January 1, 2025</p>
+        <p><strong>Effective:</strong> January 1, 2026</p>
         <p>This website does not use tracking cookies, analytics cookies, or advertising cookies.</p>
         <p>No Google Analytics, Facebook Pixel, or similar third-party tracking is present on this site.</p>
         <p>External platforms (Reddit, X/Twitter) linked from this site may set their own cookies when you visit them.</p>
