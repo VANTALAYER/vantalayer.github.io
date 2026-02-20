@@ -519,7 +519,7 @@ function renderCraftTimeLog(el) {
           <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download ctl-download--large">
             ${ICON.download}
             <span>Download CraftTimeLog v1.1.0</span>
-            <span class="ctl-dl-os">${ICON.windows} Windows — Free</span>
+            <span class="ctl-dl-os">${ICON.windows} Windows - Free</span>
           </a>
           <p class="ctl-cta-fine">A free tool by <strong>Vanta Layer Systems</strong></p>
         </div>
