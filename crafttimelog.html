@@ -5,120 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="site-root" content="./">
   <title>CraftTimeLog — VANTA LAYER</title>
+  <meta name="description" content="CraftTimeLog: minimalist time tracking for creators, by Vanta Layer Systems.">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="light-mode">
-<main class="ctl-page">
-  <div class="ctl-wrap" style="position:relative;overflow:hidden;">
-    <div class="ctl-glow-1"></div>
-    <div class="ctl-glow-2"></div>
-
-    <div class="ctl-hero">
-      <div class="ctl-icon-wrap">
-        <svg width="64" height="64" fill="none" stroke="#2563eb" stroke-width="1.5" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10"/>
-          <polyline points="12 6 12 12 16 14"/>
-        </svg>
-      </div>
-
-      <div class="ctl-title">Craft<span>Time</span>Log</div>
-      <p class="ctl-subtitle">The professional-grade, minimalist, and offline-first time tracker designed for creators who value their flow state.</p>
-
-      <button class="ctl-download">
-        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-          <polyline points="8 17 12 21 16 17"/>
-          <line x1="12" y1="12" x2="12" y2="21"/>
-          <path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/>
-        </svg>
-        Download Stable V1.0
-      </button>
-
-      <div class="ctl-screenshots">
-        <div class="ctl-ss-grid">
-          <div class="ctl-ss-item">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Main Interface" loading="lazy">
-          </div>
-          <div class="ctl-ss-item">
-            <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=800" alt="Analytics View" loading="lazy">
-          </div>
-          <div class="ctl-ss-item">
-            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=800" alt="Settings" loading="lazy">
-          </div>
-        </div>
-        <div class="ctl-platform-row">
-          <div class="ctl-platform">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            Desktop Optimized
-          </div>
-          <div class="ctl-platform">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            Tablet Support
-          </div>
-          <div class="ctl-platform">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            Mobile Sync
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ctl-features">
-      <div class="ctl-feature">
-        <div class="ctl-feature-icon">
-          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
-        <h3>Zero Friction</h3>
-        <p>Forget complex forms. Start tracking instantly with global hotkeys or one-click interactions.</p>
-      </div>
-      <div class="ctl-feature">
-        <div class="ctl-feature-icon">
-          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-        </div>
-        <h3>Vault Storage</h3>
-        <p>Your data never leaves your machine. Local-only JSON layers ensure absolute privacy.</p>
-      </div>
-      <div class="ctl-feature">
-        <div class="ctl-feature-icon">
-          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-            <polyline points="2 17 12 22 22 17"/>
-            <polyline points="2 12 12 17 22 12"/>
-          </svg>
-        </div>
-        <h3>Deep Layers</h3>
-        <p>Categorize your work by focus intensity and project hierarchy for granular insights.</p>
-      </div>
-    </div>
-
-    <div class="ctl-cta">
-      <div class="ctl-cta-text">
-        <h2>Focus on the Work,<br>Not the Tracker.</h2>
-        <p>Built for internal use and now available externally. Professional, proprietary, and precise.</p>
-      </div>
-      <div class="ctl-timer-box">
-        <div class="ctl-timer-display" id="timerDisplay">00:00:00</div>
-        <div class="ctl-timer-label">Active Craft Session</div>
-        <div class="ctl-progress-bar"><div class="ctl-progress-fill"></div></div>
-      </div>
-    </div>
-  </div>
-</main>
-
-<script src="js/nav.js"></script>
-<script>
-  let secs = 0;
-  setInterval(() => {
-    secs++;
-    const h = String(Math.floor(secs/3600)).padStart(2,'0');
-    const m = String(Math.floor((secs%3600)/60)).padStart(2,'0');
-    const s = String(secs%60).padStart(2,'0');
-    const el = document.getElementById('timerDisplay');
-    if (el) el.textContent = `${h}:${m}:${s}`;
-  }, 1000);
-</script>
+<body>
+  <main id="app" data-page="crafttimelog"></main>
+  <script src="js/nav.js"></script>
+  <script src="js/pages.js"></script>
 </body>
 </html>
