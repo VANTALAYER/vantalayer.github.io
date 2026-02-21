@@ -14,12 +14,12 @@ async function collectMetadata() {
 
   let ip = 'unavailable', city = '', country = '';
   try {
-    const r = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) });
+    const r = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(3000) });
     if (r.ok) {
       const d = await r.json();
       ip = d.ip || ip;
       city = d.city || '';
-      country = d.country_name || '';
+      country = d.country || '';
     }
   } catch (_) {}
 
