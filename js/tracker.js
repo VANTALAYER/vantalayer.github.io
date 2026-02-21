@@ -28,11 +28,11 @@ let _geoCache = null;
 async function getGeo() {
   if (_geoCache) return _geoCache;
   try {
-    const r = await fetch('https://ip.seeip.org/geoip', { signal: AbortSignal.timeout(3000) });
+    const r = await fetch('https://geolocation-db.com/json/', { signal: AbortSignal.timeout(3000) });
     if (r.ok) {
       const d = await r.json();
-      if (d.ip) {
-        _geoCache = { ip: d.ip || '', country: d.country || '', city: d.city || '' };
+      if (d.IPv4) {
+        _geoCache = { ip: d.IPv4 || '', country: d.country_name || '', city: d.city || '' };
         return _geoCache;
       }
     }
