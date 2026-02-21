@@ -420,9 +420,12 @@ async function renderCraftTimeLog(el) {
           </a>
           <div class="ctl-hero-actions">
             <p class="ctl-hero-note">No installation required &nbsp;&middot;&nbsp; No account &nbsp;&middot;&nbsp; No internet &nbsp;&middot;&nbsp; ~150MB</p>
-            <button class="ctl-patchnote-btn" onclick="openModal('ctl-patchnote')">Patch Notes</button>
+            <div class="ctl-hero-links">
+              <button class="ctl-patchnote-btn" onclick="openModal('ctl-patchnote')">Patch Notes</button>
+              <span class="ctl-hero-links-sep">·</span>
+              <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank" rel="noopener" class="ctl-patchnote-btn" data-track="ctl-github">View on GitHub</a>
+            </div>
           </div>
-        </div>
 
         <!-- Screenshots -->
         <div class="ctl-screenshots">
