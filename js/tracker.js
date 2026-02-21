@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════
-   tracker.js — click analytics via Google Sheets
+   tracker.js — click analytics + visit tracking
    ══════════════════════════════════════════ */
 
 const TRACKER_URL = 'https://script.google.com/macros/s/AKfycbz6Di4aVpPlDTMKYLy6rs-7ES2SUGrIepemRu9W3w9cVn7r0CkoAdk6mOTOSogSH2yN2g/exec';
@@ -29,10 +29,10 @@ async function getGeo() {
     const r = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) });
     if (r.ok) {
       const d = await r.json();
-      return { country: d.country_name || '', city: d.city || '' };
+      return { ip: d.ip || '', country: d.country_name || '', city: d.city || '' };
     }
   } catch (_) {}
-  return { country: '', city: '' };
+  return { ip: '', country: '', city: '' };
 }
 
 async function trackEvent(eventName) {
@@ -46,12 +46,12 @@ async function trackEvent(eventName) {
     page:     page.replace('.html', '') || 'home',
     browser:  getBrowser(),
     os:       getOS(),
+    ip:       geo.ip,
     country:  geo.country,
     city:     geo.city,
     referrer: document.referrer || 'direct',
   });
 
-  /* GET + no-cors: fires cleanly through GAS redirects, no CORS block */
   fetch(TRACKER_URL + '?' + params.toString(), {
     method: 'GET',
     mode:   'no-cors',
@@ -65,3 +65,31 @@ function initTracker() {
 }
 
 window.initTracker = initTracker;
+
+/* ── Session-based visit tracking — fires once per tab session ── */
+async function trackVisit() {
+  if (!TRACKER_URL || TRACKER_URL.includes('REPLACE_WITH')) return;
+  if (sessionStorage.getItem('vl_visited')) return;
+
+  sessionStorage.setItem('vl_visited', '1');
+
+  const geo = await getGeo();
+
+  const params = new URLSearchParams({
+    event:    'visit',
+    page:     window.location.pathname.split('/').pop().replace('.html', '') || 'home',
+    browser:  getBrowser(),
+    os:       getOS(),
+    ip:       geo.ip,
+    country:  geo.country,
+    city:     geo.city,
+    referrer: document.referrer || 'direct',
+  });
+
+  fetch(TRACKER_URL + '?' + params.toString(), {
+    method: 'GET',
+    mode:   'no-cors',
+  }).catch(() => {});
+}
+
+trackVisit();
