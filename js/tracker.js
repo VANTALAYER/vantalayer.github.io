@@ -28,7 +28,7 @@ let _geoCache = null;
 async function getGeo() {
   if (_geoCache) return _geoCache;
   try {
-    const r = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(3000) });
+    const r = await fetch('https://ip.seeip.org/geoip', { signal: AbortSignal.timeout(3000) });
     if (r.ok) {
       const d = await r.json();
       if (d.ip) {
