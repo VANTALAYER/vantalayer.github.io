@@ -819,7 +819,7 @@ body.light-mode .footer-links a:hover { color: #555; }
 }
 
 /* System requirements */
-.ctl-section--sysreq { margin-bottom: 5rem; }
+.ctl-section--sysreq { margin-bottom: 5rem; text-align: left; }
 .ctl-sysreq-box {
   display: flex; gap: 2rem; align-items: flex-start;
   background: #fff; border-radius: 16px; padding: 2.5rem;
