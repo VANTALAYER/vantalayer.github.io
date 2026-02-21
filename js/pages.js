@@ -378,7 +378,7 @@ function renderVantaCore(el) {
 async function renderCraftTimeLog(el) {
   document.body.classList.add('light-mode');
 
-  const CTL_DOWNLOAD  = 'https://www.mediafire.com/file/pib7nub82azkfoj/CraftTimeLog.zip/file';
+  const CTL_DOWNLOAD  = 'https://github.com/VANTALAYER/CraftTimeLog/releases/download/CraftTimeLog/CraftTimeLog.zip';
   const VERSION_URL   = 'https://vantalayer.xyz/ctl/version.txt';
   const PATCHNOTE_URL = 'https://vantalayer.xyz/ctl/patchnote.txt';
 
@@ -423,7 +423,7 @@ async function renderCraftTimeLog(el) {
             <div class="ctl-hero-links">
               <button class="ctl-patchnote-btn" onclick="openModal('ctl-patchnote')">Patch Notes</button>
               <span class="ctl-hero-links-sep">·</span>
-              <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank" rel="noopener" class="ctl-patchnote-btn" data-track="ctl-github">View on GitHub</a>
+              <a href="https://github.com/VANTALAYER/CraftTimeLog/releases/latest" target="_blank" rel="noopener" class="ctl-patchnote-btn" data-track="ctl-github">View on GitHub</a>
             </div>
           </div>
 
