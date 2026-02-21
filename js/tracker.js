@@ -58,8 +58,9 @@ async function trackEvent(eventName) {
   }).catch(() => {});
 }
 
-function initTracker() {
-  document.querySelectorAll('[data-track]').forEach(el => {
+function initTracker(scope) {
+  const root = scope || document;
+  root.querySelectorAll('[data-track]').forEach(el => {
     el.addEventListener('click', () => trackEvent(el.dataset.track));
   });
 }
