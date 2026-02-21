@@ -209,7 +209,7 @@ function renderHome(el) {
   }
 
    if (typeof window.initTracker === 'function') {
-    window.initTracker();
+    window.initTracker(el);
   }
 }
 
@@ -573,7 +573,7 @@ async function renderCraftTimeLog(el) {
   `;
 
      if (typeof window.initTracker === 'function') {
-    window.initTracker();
+    window.initTracker(el);
   }
 
   /* Re-attach backdrop click for the patch note modal since it renders after DOMContentLoaded */
