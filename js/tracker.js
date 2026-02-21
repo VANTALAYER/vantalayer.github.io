@@ -61,6 +61,8 @@ async function trackEvent(eventName) {
 function initTracker(scope) {
   const root = scope || document;
   root.querySelectorAll('[data-track]').forEach(el => {
+    if (el.dataset.trackBound) return;
+    el.dataset.trackBound = '1';
     el.addEventListener('click', () => trackEvent(el.dataset.track));
   });
 }
