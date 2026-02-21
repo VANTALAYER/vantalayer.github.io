@@ -24,12 +24,17 @@ function getBrowser() {
   return 'Unknown';
 }
 
+let _geoCache = null;
 async function getGeo() {
+  if (_geoCache) return _geoCache;
   try {
-    const r = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(3000) });
+    const r = await fetch('https://ipwho.is/', { signal: AbortSignal.timeout(3000) });
     if (r.ok) {
       const d = await r.json();
-      return { ip: d.ip || '', country: d.country_name || '', city: d.city || '' };
+      if (d.ip) {
+        _geoCache = { ip: d.ip || '', country: d.country || '', city: d.city || '' };
+        return _geoCache;
+      }
     }
   } catch (_) {}
   return { ip: '', country: '', city: '' };
