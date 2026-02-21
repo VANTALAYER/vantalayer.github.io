@@ -413,7 +413,7 @@ async function renderCraftTimeLog(el) {
           </div>
           <h1 class="ctl-title">Track Your Time.<br><span>Keep Your Privacy.</span></h1>
           <p class="ctl-subtitle">A free, portable, offline-first time tracker built for creators who just want to press a button and get to work without signing up, logging in, or being spied on.</p>
-          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download" data-track="ctl-download-hero">
+          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download" data-track="ctl-download">
             ${ICON.download}
             <span>Download Free — v${currentVersion}</span>
             <span class="ctl-dl-os">${ICON.windows} Windows</span>
@@ -545,7 +545,7 @@ async function renderCraftTimeLog(el) {
         <div class="ctl-cta-section">
           <h2 class="ctl-cta-title">It's free. Just download it.</h2>
           <p class="ctl-cta-sub">Built for personal use, shared because why not. No ads, no upsell, no telemetry.</p>
-          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download ctl-download--large" data-track="ctl-download-cta">
+          <a href="${CTL_DOWNLOAD}" target="_blank" rel="noopener" class="ctl-download ctl-download--large" data-track="ctl-download">
             ${ICON.download}
             <span>Download CraftTimeLog v${currentVersion}</span>
             <span class="ctl-dl-os">${ICON.windows} Windows - Free</span>
