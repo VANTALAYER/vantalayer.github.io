@@ -63,13 +63,13 @@ function buildNav() {
             Tech ${SVG.chevron}
           </button>
           <div class="dropdown" role="menu">
-            <a href="${root('vantacore.html')}" class="dd-item" role="menuitem" data-track="nav-vantacore">
+            <a href="${root('vantacore.html')}" class="dd-item" role="menuitem">
               <div>
                 <span class="dd-label">VantaCore</span>
                 <span class="dd-sub">Management / Sim Framework</span>
               </div>
             </a>
-            <a href="${root('crafttimelog.html')}" class="dd-item" role="menuitem" data-track="nav-crafttimelog">
+            <a href="${root('crafttimelog.html')}" class="dd-item" role="menuitem">
               <div>
                 <span class="dd-label">CraftTimeLog</span>
                 <span class="dd-sub">Time Tracking App</span>
