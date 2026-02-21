@@ -1,8 +1,0 @@
-<?php
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-$ip = $_SERVER['HTTP_CF_CONNECTING_IP'] 
-   ?? $_SERVER['HTTP_X_FORWARDED_FOR'] 
-   ?? $_SERVER['REMOTE_ADDR'] 
-   ?? '';
-echo json_encode(['ip' => $ip]);
