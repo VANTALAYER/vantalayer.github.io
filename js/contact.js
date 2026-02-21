@@ -121,13 +121,14 @@ function initContactForm() {
         statusEl.textContent = '✓ Message received. We\'ll get back to you soon.';
         statusEl.className = 'form-status success';
         form.reset();
-        /* Scroll status into view smoothly — no page-top jump */
         statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (typeof trackEvent === 'function') trackEvent('contact-form-success');
       } else {
         const errMsg = data.errors ? data.errors.map(e => e.message).join(', ') : (data.error || 'Submission failed.');
         statusEl.textContent = '✕ ' + errMsg;
         statusEl.className = 'form-status error';
         statusEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (typeof trackEvent === 'function') trackEvent('contact-form-error');
       }
     } catch (err) {
       statusEl.textContent = '✕ Network error. Please try again or email contact+form@vantalayer.xyz directly.';
